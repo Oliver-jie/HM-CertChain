@@ -1,0 +1,12 @@
+// HM-CertChain design extension (NOT a replacement for fabric-protos common.proto).
+// The official common.BlockHeader must be modified and regenerated in the
+// matching fabric-protos repository; this standalone definition documents
+// the proposed additional field and does not alter Fabric's wire format.
+syntax = "proto3";
+package hmcertchain.protocol;
+message ProposedBlockHeader {
+  uint64 number = 1;
+  bytes previous_hash = 2;
+  bytes data_hash = 3;
+  bytes pre_ca_hash = 4;
+}
